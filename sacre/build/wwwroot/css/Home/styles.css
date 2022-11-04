@@ -1,0 +1,248 @@
+﻿.home-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-major {
+    padding-top: 64px;
+    color: #C5B8A2;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.search-funds {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 56px;
+    color: #173232;
+    padding-top: 8px;
+}
+
+.search-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #637692;
+    padding-top: 16px;
+    max-width: 628px;
+}
+
+.advertising-top {
+    width: 100%;
+    min-height: 298px;
+    background: #F5F5F5;
+    margin-left: 68px;
+}
+
+.advertising-bottom {
+    width: 100%;
+    min-height: 250px;
+    background: #F5F5F5;
+    margin-top: 64px;
+    margin-bottom: 40px;
+}
+
+.search-advertising-row {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 367px) {
+    .advertising-top {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .search-advertising-row {
+        flex-direction: column;
+        height: 675px;
+    }
+
+    .advertising-top {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 777px) {
+    .search-advertising-row {
+        height: 750px;
+    }
+}
+
+.search-assets {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    align-items: center;
+    margin-top: 24px;
+    padding: 10px 16px;
+    gap: 8px;
+    width: 628px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.search-assets input {
+    width: 100%;
+}
+
+.search-assets input::placeholder {
+    color: #A4B4CB;
+}
+
+.search-assets input, .search-assets input:focus {
+    border: none;
+    outline: none;
+}
+
+.favorite-assets {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #0F172A;
+    margin-bottom: 48px;
+}
+
+.home-assets-card {
+    height: 104px !important;
+    justify-content: space-between !important;
+}
+
+.home-card-retangle {
+    height: 40px !important;
+}
+
+div#modalBuscarAtivos {
+    max-width: fit-content;
+    margin-top: 422px;
+    left: unset !important;
+    position: absolute;
+    height: auto !important;
+}
+
+
+@media (min-width: 555px) {
+    div #actives-list {
+        max-width: fit-content !important;
+    }
+}
+
+.buscaAtivos {
+    margin-left: 0 !important;
+}
+
+@media (max-width: 232px) {
+    div #modalBuscarAtivos {
+        margin-top: 805px !important;
+    }
+}
+
+@media (min-width: 232px) and (max-width: 260px) {
+    div #modalBuscarAtivos {
+        margin-top: 755px !important;
+    }
+}
+
+@media (min-width: 260px) and (max-width: 265px) {
+    div #modalBuscarAtivos {
+        margin-top: 680px !important;
+    }
+}
+
+@media (min-width: 265px) and (max-width: 306px) {
+    div #modalBuscarAtivos {
+        margin-top: 650px !important;
+    }
+}
+
+@media (min-width: 306px) and (max-width: 353px) {
+    div #modalBuscarAtivos {
+        margin-top: 678px !important;
+    }
+}
+
+@media (min-width: 353px) and (max-width: 375px) {
+    div #modalBuscarAtivos {
+        margin-top: 680px !important;
+    }
+    div #actives-list {
+        max-width: 280px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 428px) {
+    div #modalBuscarAtivos {
+        margin-top: 650px !important;
+    }
+    div #actives-list {
+        max-width: 350px;
+    }
+}
+
+@media (min-width: 428px) and (max-width: 520px) {
+    div #modalBuscarAtivos {
+        margin-top: 580px !important;
+    }
+    div #actives-list {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 520px) and (max-width: 577px) {
+    div #modalBuscarAtivos {
+        margin-top: 525px !important;
+    }
+    div #actives-list {
+        max-width: 450px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    div #modalBuscarAtivos {
+        margin-top: 475px !important;
+    }
+}
+
+.checkmark {
+    position: relative !important;
+    margin-top: 8px;
+    margin-right: 16px !important;
+}
+
+div#actives-list {
+    overflow-y: auto !important;
+}
+
+.search-fade {
+    z-index: 1041 !important;
+}
+
+.cards-list {
+    flex-flow: row wrap !important;
+}
+
+.modal-backdrop > .lessAbove {
+    z-index: 1029 !important;
+}
+
+.modal-backdrop {
+    height: 100% !important;
+    width: 100% !important;
+}

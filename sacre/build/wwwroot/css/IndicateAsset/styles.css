@@ -1,0 +1,56 @@
+﻿
+.title-major {
+    padding-top: 64px !important;
+    color: #0F172A;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+div#actives-row {
+    background: #F6F7F9 !important;
+    align-items: center;
+}
+
+.actives {
+    height: 64px !important;
+}
+
+div#search-box input, div#search-box input:focus {
+    outline: none;
+    border: none;
+}
+
+div#search-box {
+    margin: 12px 24px 12px 0px;
+}
+
+.card-indicate {
+    place-content: space-between;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    width: 340px;
+    height: 104px
+}
+
+.checkmark {
+    position: relative !important;
+}
+
+.checkbox-input span {
+    margin-top: 5px !important;
+    margin-right: 16px !important;
+    border-radius: 100%;
+}
+
+.retangle, .btn {
+    height: 40px !important;
+}

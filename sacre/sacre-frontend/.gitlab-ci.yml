@@ -1,0 +1,151 @@
+stages:
+  - build
+  - test
+  - analysis
+  - deploy
+
+build-test:
+  tags:
+    - front
+  stage: build
+  image: docker-nexus.uds.com.br/node/node12
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    paths:
+      - node_modules/   
+      - public/   
+      - src/      
+    expire_in: 1 hrs
+  only:
+    - merge_requests
+  script:
+    - npm install
+    - export API_HOST=$API_HOST_TEST
+    - echo $API_HOST
+    - npm run build
+
+test:
+  tags:
+    - front
+  stage: test
+  image: docker-nexus.uds.com.br/node/node12
+  only: ['merge_requests']
+  except:
+    - /^develop$/
+    - /^release\/\d+.*/
+    - /^master$/
+  dependencies:
+    - build-test
+  artifacts:
+    paths:
+      - node_modules/
+      - coverage/      
+    expire_in: 1 hrs    
+  script:
+    - npm run test:ci
+
+analysis:
+  stage: analysis
+  image: docker-nexus.uds.com.br/node/node12
+  tags:
+    - front
+  only: ['merge_requests']
+  except:
+    - /^develop$/
+    - /^release\/\d+.*/
+    - /^master$/ 
+  dependencies:
+    - build-test
+    - test
+  script:
+    - npx sonar-scanner
+      -Dsonar.host.url=$SONAR_URL
+      -Dsonar.projectKey=$SONAR_PROJECT_KEY
+      -Dsonar.login=$SONAR_LOGIN      
+      -Dsonar.gitlab.user_token=$GITLAB_USER_TOKEN
+      -Dsonar.gitlab.project_id=$CI_PROJECT_PATH
+      -Dsonar.gitlab.commit_sha=$CI_COMMIT_SHA
+      -Dsonar.gitlab.ref_name=$CI_COMMIT_REF_NAME
+      -Dsonar.gitlab.ci_merge_request_iid=$CI_MERGE_REQUEST_IID
+
+build-develop:
+  tags:
+    - front
+  stage: build
+  image: docker-nexus.uds.com.br/node/node12
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    paths:
+      - node_modules/   
+      - public/   
+      - src/      
+    expire_in: 1 hrs
+  only:
+    - /^develop$/
+  script:
+    - npm install
+    - export API_HOST=$API_HOST_DEVELOP
+    - echo $API_HOST
+    - npm run build  
+
+deploy-develop:
+  stage: deploy
+  dependencies:
+    - build-develop
+  image:
+    name: docker-nexus.uds.com.br/tmaier/docker-compose:latest
+    entrypoint: ["/bin/sh", "-c"]
+  only:
+    - /^develop$/
+  script:
+    - export API_HOST=$API_HOST_DEVELOP
+    - echo $API_HOST    
+    - docker login docker-nexus.uds.com.br -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - docker build --build-arg API_HOST=$API_HOST --no-cache=$IGNORAR_DOCKER_CACHE -t docker-nexus.uds.com.br/skeleton/react-skeleton:develop .
+    - docker push docker-nexus.uds.com.br/skeleton/react-skeleton:develop
+  tags:
+    - front
+
+build-quality:
+  tags:
+    - front
+  stage: build
+  image: docker-nexus.uds.com.br/node/node12
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    paths:
+      - node_modules/   
+      - public/   
+      - src/      
+    expire_in: 1 hrs
+  only:
+    - /^.*-quality$/
+  script:
+    - npm install
+    - export API_HOST=$API_HOST_QUALITY
+    - echo $API_HOST
+    - npm run build            
+
+deploy-quality:
+  stage: deploy
+  dependencies:
+    - build-quality  
+  image:
+    name: docker-nexus.uds.com.br/tmaier/docker-compose:latest
+    entrypoint: ["/bin/sh", "-c"]
+  only:
+    - /^.*-quality$/
+  script:
+    - export API_HOST=$API_HOST_QUALITY
+    - echo $API_HOST    
+    - docker login docker-nexus.uds.com.br -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - docker build --build-arg API_HOST=$API_HOST --no-cache=$IGNORAR_DOCKER_CACHE -t docker-nexus.uds.com.br/skeleton/react-skeleton:quality .
+    - docker push docker-nexus.uds.com.br/skeleton/react-skeleton:quality
+  tags:
+    - front

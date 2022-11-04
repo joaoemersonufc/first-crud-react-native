@@ -1,0 +1,472 @@
+﻿.red {
+    background: #FF8787;
+}
+.red-percent {
+    color: #F44E4E !important;
+    font-size: 14px;
+}
+.normal-percent {
+    color: #1E293B !important;
+}
+.cdi-percent, .ibov-percent {
+    color: #637692 !important;
+    font-size: 14px;
+}
+.blue {
+    background: #4B2EFF;
+}
+.yellow {
+    background: #FFB571;
+}
+
+/*#region red colors */
+
+.lightsalmon {
+    background: #FFA07A;
+}
+
+.salmon {
+    background: #FA8072;
+}
+
+.lightcoral {
+    background: #F08080;
+}
+.indianred {
+    background: #CD5C5C;
+}
+
+.crimson {
+    background: #DC143C;
+}
+
+.firebrick {
+    background: #B22222;
+}
+
+darkred {
+    background: #8B0000;
+}
+
+.coral {
+    background: #FF7F50;
+}
+.tomato {
+    background: #FF6347;
+}
+.orangered {
+    background: #FF4500;
+}
+.gold {
+    background: #FFD700;
+}
+.orange {
+    background: #FFA500;
+}
+.darkorange {
+    background: #FF8C00;
+}
+
+.lightyellow {
+    background: #FFFFE0;
+}
+.lemonchiffon {
+    background: #FFFACD;
+}
+.lightgoldenrodyellow {
+    background: #FAFAD2;
+}
+.papayawhip {
+    background: #FFEFD5;
+}
+.moccasin {
+    background: #FFE4B5;
+}
+.peachpuff {
+    background: #FFDAB9;
+}
+.palegoldenrod {
+    background: #EEE8AA;
+}
+.khaki {
+    background: #F0E68C;
+}
+.darkkhaki {
+    background: #BDB76B;
+}
+.yellow {
+    background: #FFFF00;
+}
+/*#endregion */
+
+/*#region green colors */
+
+.lawngreen {
+    background: #7CFC00;
+}
+.chartreuse {
+    background: #7FFF00;
+}
+.limegreen {
+    background: #32CD32;
+}
+.lime {
+    background: #00FF00;
+}
+.forestgreen {
+    background: #228B22;
+}
+.green {
+    background: #008000;
+}
+.darkgreen {
+    background: #006400;
+}
+.greenyellow {
+    background: #ADFF2F;
+}
+.yellowgreen {
+    background: #9ACD32;
+}
+.springgreen {
+    background: #00FF7F;
+}
+.mediumspringgreen {
+    background: #00FA9A;
+}
+.lightgreen {
+    background: #90EE90;
+}
+.palegreen {
+    background: #98FB98;
+}
+.darkseagreen {
+    background: #8FBC8F;
+}
+.mediumseagreen {
+    background: #3CB371;
+}
+.seagreen {
+    background: #2E8B57;
+}
+.olive {
+    background: #808000;
+}
+.darkolivegreen {
+    background: #556B2F;
+}
+.olivedrab {
+    background: #6B8E23;
+}
+/*#endregion */
+
+/*#region cyan colors */
+.lightcyan {
+    background: #E0FFFF;
+}
+.cyan {
+    background: #00FFFF;
+}
+.aqua {
+    background: #00FFFF;
+}
+.aquamarine {
+    background: #7FFFD4;
+}
+.mediumaquamarine {
+    background: #66CDAA;
+}
+.paleturquoise {
+    background: #AFEEEE;
+}
+.turquoise {
+    background: #40E0D0;
+}
+.mediumturquoise {
+    background: #48D1CC;
+}
+.darkturquoise {
+    background: #00CED1;
+}
+.lightseagreen {
+    background: #20B2AA;
+}
+.cadetblue {
+    background: #5F9EA0;
+}
+.darkcyan {
+    background: #008B8B;
+}
+.teal {
+    background: #008080;
+}
+
+/*#endregion */
+
+/*#region blue colors */
+.powderblue {
+    background: #B0E0E6;
+}
+.lightblue {
+    background: #ADD8E6;
+}
+.lightskyblue {
+    background: #87CEFA;
+}
+.skyblue {
+    background: #87CEEB;
+}
+.deepskyblue {
+    background: #00BFFF;
+}
+.lightsteelblue {
+    background: #B0C4DE;
+}
+.dodgerblue {
+    background: #1E90FF;
+}
+.cornflowerblue {
+    background: #6495ED;
+}
+.steelblue {
+    background: #4682B4;
+}
+.royalblue {
+    background: #4169E1;
+}
+
+.mediumblue {
+    background: #0000CD;
+}
+.darkblue {
+    background: #00008B;
+}
+.navy {
+    background: #000080;
+}
+.midnightblue {
+    background: #191970;
+}
+.mediumslateblue {
+    background: #7B68EE;
+}
+.slateblue {
+    background: #6A5ACD;
+}
+.darkslateblue {
+    background: #483D8B;
+}
+/*#endregion */
+
+/*#region purple colors */
+.lavender {
+    background: #E6E6FA;
+}
+.thistle {
+    background: #D8BFD8;
+}
+.plum {
+    background: #DDA0DD;
+}
+.violet {
+    background: #EE82EE;
+}
+.orchid {
+    background: #DA70D6;
+}
+.fuchsia {
+    background: #FF00FF;
+}
+.magenta {
+    background: #FF00FF;
+}
+.mediumorchid {
+    background: #BA55D3;
+}
+.mediumpurple {
+    background: #9370DB;
+}
+.blueviolet {
+    background: #8A2BE2;
+}
+.darkviolet {
+    background: #9400D3;
+}
+.darkorchid {
+    background: #9932CC;
+}
+.darkmagenta {
+    background: #8B008B;
+}
+.purple {
+    background: #800080;
+}
+.indigo {
+    background: #4B0082;
+}
+ /*#endregion */
+
+/*#region pink colors */
+
+.pink {
+    background: #FFC0CB;
+}
+.lightpink {
+    background: #FFB6C1;
+}
+.hotpink {
+    background: #FF69B4;
+}
+.deeppink {
+    background: #FF1493;
+}
+.palevioletred {
+    background: #DB7093;
+}
+.mediumvioletred {
+    background: #C71585;
+}
+/*#endregion */
+
+/*#region white colors */
+
+.white {
+    background: #FFFFFF;
+}
+.snow {
+    background: #FFFAFA;
+}
+.honeydew {
+    background: #F0FFF0;
+}
+.mintcream {
+    background: #F5FFFA;
+}
+.azure {
+    background: #F0FFFF;
+}
+.aliceblue {
+    background: #F0F8FF;
+}
+.ghostwhite {
+    background: #F8F8FF;
+}
+.whitesmoke {
+    background: #F5F5F5;
+}
+.seashell {
+    background: #FFF5EE;
+}
+.beige {
+    background: #F5F5DC;
+}
+.oldlace {
+    background: #FDF5E6;
+}
+.floralwhite {
+    background: #FFFAF0;
+}
+.ivory {
+    background: #FFFFF0;
+}
+.antiquewhite {
+    background: #FAEBD7;
+}
+.linen {
+    background: #FAF0E6;
+}
+.lavenderblush {
+    background: #FFF0F5;
+}
+.mistyrose {
+    background: #FFE4E1;
+}
+
+/*#endregion */
+        
+/*#region gray colors */
+
+.gainsboro {
+    background: #DCDCDC;
+}
+.lightgray {
+    background: #D3D3D3;
+}
+.silver {
+    background: #C0C0C0;
+}
+.darkgray {
+    background: #A9A9A9;
+}
+.gray {
+    background: #808080;
+}
+.dimgray {
+    background: #696969;
+}
+.lightslategray {
+    background: #778899;
+}
+.slategray {
+    background: #708090;
+}
+.darkslategray {
+    background: #2F4F4F;
+}
+.black {
+    background: #000000;
+}
+/*#endregion */
+
+/*#region brown colors */
+
+.cornsilk {
+    background: #FFF8DC;
+}
+.blanchedalmond {
+    background: #FFEBCD;
+}
+.bisque {
+    background: #FFE4C4;
+}
+.navajowhite {
+    background: #FFDEAD;
+}
+.wheat {
+    background: #F5DEB3;
+}
+.burlywood {
+    background: #DEB887;
+}
+.tan {
+    background: #D2B48C;
+}
+.rosybrown {
+    background: #BC8F8F;
+}
+.sandybrown {
+    background: #F4A460;
+}
+.goldenrod {
+    background: #DAA520;
+}
+.peru {
+    background: #CD853F;
+}
+.chocolate {
+    background: #D2691E;
+}
+.saddlebrown {
+    background: #8B4513;
+}
+.sienna {
+    background: #A0522D;    
+}
+.brown {
+    background: #A52A2A;
+}
+.maroon {
+    background: #800000;
+}
+
+/*#endregion */
