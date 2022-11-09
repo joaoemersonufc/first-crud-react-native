@@ -6,7 +6,7 @@ after this, you need to do a "docker compose up" command so you'll get the docke
 
 after that you'll need the migrations, just run "docker run -v {your_entire_path_to_project}\migrations:/migrations --network host migrate/migrate -path=/migrations/ -database "postgres://127.0.0.1/api_biblioteca?sslmode=disable&user=postgres&password=postgres" up 1"
 
-Then you can run the project with "go run.\main.go"
+Then you can run the project with "go run .\main.go"
 
 the default routes is 
 
@@ -24,6 +24,9 @@ example of raw POST:
         "description":"Aprenda a programar! <3",
         "value": 150
     }
+
+# (NOVO) gRPC adicionado
+Para complementar a aplicação foi adicionado um sistema de protocol buffers da google, onde através do protobuf e protoc são criados arquivos de protocolo já definidos e que foram complementados através de um cliente/servidor que aguarda no dns 127.0.0.1:9000 receber informações que estão na pasta src -> client -> main.go (para executar, basta entrar na pasta e rodar o comando go run \.main.go) e enviá-las ao servidor que está na pasta src -> server -> main.go que irá retornar o nome do livro que foi adicionado em questão.
 
 # Situação de exceção
 ![plot](./exceptions/entrypoint.png)
