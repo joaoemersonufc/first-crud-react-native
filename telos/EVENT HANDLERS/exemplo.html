@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handlers</title>
+
+    <script>
+        function msg(){
+            alert('Elementos carregados');
+        }
+
+        function clicked(){
+            alert('elemento clicado');
+        }
+
+        function onHover(){
+            const button = document.getElementById('botao_ativacao');
+            button.style.color = 'green';
+            alert('o mouse passou por aqui!');
+        }
+
+        function addEvents(){
+            const button = document.getElementById('botao_ativacao');
+            button.addEventListener('mouseover', onHover);
+        }
+
+        window.addEventListener('load', addEvents)
+    </script>
+</head>
+<body>
+    <h1>Event Handlers</h1>
+
+    <button id="botao_ativacao">Ativar evento</h2>
+</body>
+</html>

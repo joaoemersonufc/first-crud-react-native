@@ -1,0 +1,43 @@
+header {
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+header > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+header > nav > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+header > nav > ul > li > a {
+    color: #fff;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    flex: 1 1 200px;
+}
+
+section > div {
+    max-width: 200px;
+}
+
+section > div > img {
+    object-fit: contain;
+    width: 200px;
+}

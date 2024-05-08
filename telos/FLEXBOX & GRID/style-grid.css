@@ -1,0 +1,48 @@
+header {
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+header > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+header > nav > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+header > nav > ul > li > a {
+    color: #fff;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.promocao {
+    grid-column: 1;
+    grid-row: 1 / 5;
+
+}
+
+.grid > div {
+    max-width: 200px;
+}
+
+.grid > div > img {
+    object-fit: contain;
+    width: 200px;
+}
