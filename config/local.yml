@@ -1,1 +1,0 @@
-dsn: "postgres://127.0.0.1/api_bibliotecal?sslmode=disable&user=postgres&password=postgres"
